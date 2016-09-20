@@ -1,0 +1,5 @@
+Install node.js to run npm
+Run 'npm install' in root directory which contains all dependencies in package.json
+To build run 'gulp' in root directory which contains gulpfile.js
+To run web server go to the 'server' folder and run 'node server.js'
+Access the application using http://localhost:8080/
