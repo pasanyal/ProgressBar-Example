@@ -1,0 +1,66 @@
+//* START Path vars */
+
+@cssRootPath: "/styles";
+@cssResourcesPath: "@{cssRootPath}/resources";
+
+//* END Path vars */
+
+//* START Breakpoint vars */
+
+@bpSmall: 34em;
+@bpMedium: 54em;
+@bpLarge: 74em;
+
+//* END Breakpoint vars */
+
+//* START Media Query vars */
+
+@mq-lt-small: ~"(max-width: @{bpSmall})";
+@mq-gt-small: ~"(min-width: @{bpSmall})";
+@mq-lt-medium: ~"(max-width: @{bpMedium})";
+@mq-gt-medium: ~"(min-width: @{bpMedium})";
+@mq-lt-large: ~"(max-width: @{bpLarge})";
+@mq-gt-large: ~"(min-width: @{bpLarge})";
+
+@mq-screen: ~"only screen";
+@mq-print: ~"print";
+
+@mq-mobile: ~"@{mq-screen} and @{mq-lt-small}";
+@mq-gt-mobile: ~"@{mq-screen} and @{mq-gt-small}";
+
+@mq-tablet: ~"@{mq-screen} and @{mq-gt-small} and @{mq-lt-medium}";
+@mq-gt-tablet: ~"@{mq-screen} and @{mq-gt-medium}";
+@mq-not-tablet: ~"@{mq-screen} and @{mq-lt-small}, @{mq-screen} and @{mq-gt-medium}";
+
+@mq-laptop: ~"@{mq-screen} and @{mq-gt-medium} and @{mq-lt-large}";
+@mq-lt-laptop:  ~"@{mq-screen} and @{mq-lt-medium}";
+@mq-not-laptop: ~"@{mq-screen} and @{mq-lt-medium}, @{mq-screen} and @{mq-gt-large}";
+
+@mq-desktop: ~"@{mq-screen} and @{mq-gt-large}";
+@mq-lt-desktop: ~"@{mq-screen} and @{mq-lt-large}";
+
+//* END Media Query vars */
+
+//* START Base vars */
+
+@black: #000000;
+@blue: #0061de;
+@red: #ea1b3d;
+
+@top-position: -18.5px;
+@relative-position: relative;
+
+@row-height: 20px;
+@row-width: 200px;
+@row-border-width: 1px;
+@row-border-style: solid;
+@row-border-color: @black;
+@row-margin: 5px;
+@center-text-align: center;
+
+@full-height: 100%;
+@full-width: 100%;
+@full-limited-color: @blue;
+@full-invalid-color: @red;
+@row-index: 1001;
+//* END Base vars */

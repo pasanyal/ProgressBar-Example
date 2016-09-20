@@ -1,0 +1,57 @@
+/*.row-pb{
+    height: 20px;
+    width: 200px;
+    border: 1px solid #000000;
+    margin: 5px;
+    text-align: center;
+}
+
+.inner-progress-barB{
+    height: 100%;
+    background-color: blue;
+    position: relative;
+    top: -20px;
+}
+
+.inner-progress-barR{
+    height: 100%;
+    background-color: red;
+    position: relative;
+    top: -20px;
+}
+
+.display-data{
+    position: relative;
+    z-index: 1001;
+}*/
+
+.row-pb{
+    height: @row-height;
+    width: @row-width;
+    border: @row-border-width @row-border-style @black;
+    margin: @row-margin;
+    text-align: @center-text-align;
+    
+    .inner-progress-barB{
+        height: @full-height;
+        background-color: @blue;
+        position: @relative-position;
+        top: @top-position;
+    }
+
+    .inner-progress-barR{
+        height: @full-height;
+        background-color: @red;
+        position: @relative-position;
+        top: @top-position;
+    }
+
+    .display-data{
+        position: @relative-position;
+        z-index: @row-index;
+    }
+}
+
+.row-cb{
+    margin: @row-margin;
+}

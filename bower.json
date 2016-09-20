@@ -1,0 +1,22 @@
+{
+  "name": "ReactJS-ProgressBar",
+  "description": "Progress bar with react, express, and nodejs,",
+  "main": "index.js",
+  "authors": [
+    "Test"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-css": "~3.3.4"
+  }
+}
