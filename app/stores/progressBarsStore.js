@@ -29,7 +29,7 @@ function ProgressBarStore() {
                             s.displayWidth = 0;
                             s.width = s.displayWidth;
                         }
-                        else if(s.displayWidth > 0 && s.displayWidth < 100)
+                        else if(s.displayWidth >= 0 && s.displayWidth <= 100)
                         {
                             s.width = s.displayWidth;
                             s.className = "inner-progress-barB";
@@ -45,7 +45,7 @@ function ProgressBarStore() {
                             s.displayWidth = 0;
                             s.width = s.displayWidth;
                         }
-                        else if(s.displayWidth > 0 && s.displayWidth < 100)
+                        else if(s.displayWidth >= 0 && s.displayWidth <= 100)
                         {
                             s.width = s.displayWidth;
                             s.className = "inner-progress-barB";
