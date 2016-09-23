@@ -9,8 +9,6 @@ var ChangeBar = require('../components/ChangeBar.jsx');
 
 describe("ProgressBarList selectbox", () => {
   beforeEach(function() {
-    //let { TestUtils, TestUtils: { Simulate } } = React.addons;
-  
     let changeBar = TestUtils.renderIntoDocument(
       <ChangeBar />
     );
@@ -61,11 +59,11 @@ describe("ProgressBarList selectbox", () => {
     expect(progressBarList).toBeDefined();      
   });
 
-  it("renders a select box", function() {
+  it("renders the select box", function() {
     expect(this.selectDOM().tagName).toEqual("SELECT");
   });
 
-  it("has default text selected", function() {
+  it("select element has default text selected", function() {
     let selected = this.selectedBarDOM();
 
     expect(selected).toBeDefined();
@@ -73,13 +71,13 @@ describe("ProgressBarList selectbox", () => {
     expect(selected.value).toEqual('');
   });
 
-  it("has all bars", function() {
+  it("select has all bars", function() {
     let barsPresented = this.availableBars();
 
     expect(barsPresented.length).toEqual(2);      
   });
 
-  it("allows changing the bars by the user", function() {
+  it("select allows changing the bars by the user", function() {
     this.Simulate.change(this.selectDOM(), { target: (this.barsDOM())[1] });
     expect(this.selectedBarDOM().value).toEqual("pb1");
 
