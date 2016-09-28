@@ -22,6 +22,16 @@ gulp.task("bundle", function () {
         .pipe(gulp.dest("app/dist"))
 });
 
+gulp.task("bundle", function () {
+    return browserify({
+        entries: "./app/tests/ProgressBarList.test.js",
+        debug: true
+    }).transform(reactify)
+        .bundle()
+        .pipe(source("tests.js"))
+        .pipe(gulp.dest("app/__tests__"))
+});
+
 gulp.task("copy", ["bundle"], function () {
     return gulp.src(["app/index.html"])
         .pipe(gulp.dest("app/dist"));
@@ -45,5 +55,5 @@ gulp.task('jest', plugins.shell.task('npm test', {
 
 gulp.task('test', function () {
   runSequence('jest');
-  gulp.watch(['app/__tests__/*.js'], ['jest'])
+  gulp.watch(['app/__tests__/tests.js'], ['jest'])
 });
