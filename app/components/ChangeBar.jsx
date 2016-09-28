@@ -14,8 +14,6 @@ module.exports = React.createClass({
 		var state = this.state;
 		state[name] = e.target.value;
 		this.setState(state);
-		  
-		actions.changeBar(this.state);
     },    
     render:function(){
         return(
